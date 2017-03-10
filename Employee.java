@@ -1,4 +1,3 @@
-
 public class Employee {
 	
 	private String _lastName;
@@ -6,7 +5,7 @@ public class Employee {
 	private String _phoneNumber;
 	private String _department;
 	
-	public Employee(String lastName, String firstName, String phoneNumber, String department ) {
+	public Employee(String firstName, String lastName, String phoneNumber, String department ) {
 		_lastName = lastName;
 		_firstName = firstName;
 		_phoneNumber = phoneNumber;

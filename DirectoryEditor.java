@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.*;
 
 
@@ -9,9 +8,6 @@ public class DirectoryEditor {
 	public static void main(String[] args){
 		Scanner scIn;
 		String stringInput;
-		String[] input;
-
-		ArrayList<Employee> employee =new ArrayList<Employee>();
 		DirectoryProxy dp = new DirectoryProxy();
 		
 		try{
@@ -32,17 +28,15 @@ public class DirectoryEditor {
 					
 					if(stringInput.equals("ADD")){
 						while(!(stringInput=scIn.nextLine()).equals("END")){
-							input=stringInput.split(" ");
-							employee.add(new Employee(input[0],input[1],input[2],input[3]));
+							dp.add(stringInput);
 						}
-						dp.add(employee);
+						dp.add("END");
 					}
 					else if(stringInput.equals("PRINT")){
 						dp.print();
 					}
 					else if(stringInput.equals("CLR")){
 						dp.clear();
-						employee.clear();
 					}
 					else
 						throw new Exception("Illegal Input");
