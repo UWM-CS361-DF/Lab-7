@@ -15,7 +15,7 @@ public class DirectoryProxy implements Directory {
 	public void add(String employees) {
 		if(!employees.equals("END")){
 			String[] input=employees.split(" ");
-			this.employees.add(new Employee(input[0],input[1],input[2],input[3]));
+			this.employees.add(new Employee(input[0],input[1],Integer.parseInt(input[2]),input[3]));
 			sort(this.employees);
 		}
 		else{
