@@ -2,10 +2,10 @@ public class Employee {
 	
 	private String _lastName;
 	private String _firstName;
-	private int _phoneNumber;
+	private long _phoneNumber;
 	private String _department;
 	
-	public Employee(String firstName, String lastName, int phoneNumber, String department ) {
+	public Employee(String firstName, String lastName, String department, long phoneNumber) {
 		_lastName = lastName;
 		_firstName = firstName;
 		_phoneNumber = phoneNumber;
